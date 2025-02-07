@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>EB Garamond</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/hrt7gsp.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <header title="Garamond in big letters">
+      <h1 style="color: #483D37;"> EB Garamond</h1>
+    </header>
+
+    <section class="stack centeralign padding">
+      <div>
+          <h2>History</h2>
+          <p>Garamond’s fonts represent a milestone in the history of type design, a touchstone to which font designers have been returning ever since. EB Garamond is an open source project to create a revival of Claude Garamond’s famous humanist typeface from the mid-16th century. Its design reproduces the original by Claude Garamont. </p>
+
+          <p>The source for the letterforms is a scan of a specimen known as the “Berner specimen”, which, composed in 1592 by Conrad Berner, son-in-law of Christian Egenolff and his successor at the Egenolff print office, shows Garamont’s roman and Granjon’s italic fonts at different sizes. Hence the name of this project: Egenolff-Berner Garamond.</p>
+      </div>
+      <img src="images/Garamond.png" alt="Claude Garamont" class="image"/>
+    </section>
+
+    <section class="padding">
+      <h2>Comparison</h2>
+      <div class="stack centeralign" style="justify-content: space-evenly;">
+        <div>
+          <h3>Garamond</h3>
+          <p style="font-size: 1.1em;">
+            the quick brown fox jumps over the lazy dog.
+          </p>
+        </div>
+        <div>
+          <h3>EB Garamond</h3>
+          <p style="font-size: 1.1em;">
+            the quick brown fox jumps over the lazy dog.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="centeralign padding stack fontfamily">
+        <ul>
+          <li style="font-weight: 400;">EB Garamond Regular</li>
+          <li style="font-weight: 500;">EB Garamond Medium</li>
+          <li style="font-weight: 600;">EB Garamond Semibold</li>
+          <li style="font-weight: 700;">EB Garamond Bold</li>
+          <li style="font-weight: 800;">EB Garamond Extrabold</li>
+        </ul>
+        <ul>
+          <li style="font-style: italic; font-weight: 400;">EB Garamond Italic</li>
+          <li style="font-style: italic; font-weight: 500;">EB Garamond Medium Italic</li>
+          <li style="font-style: italic; font-weight: 600;">EB Garamond Semibold Italic</li>
+          <li style="font-style: italic; font-weight: 700;">EB Garamond Bold Italic</li>
+          <li style="font-style: italic; font-weight: 800;">EB Garamond Extrabold Italic</li>
+        </ul>
+    </section>
+
+    <section class="padding">
+      <div id="adjust" class="centeralign gap">
+        <div class="dropdown">
+          <button class="dropbtn">weight</button>
+          <div class="dropdown-content">
+            <a href="javascript:void(0)" onclick="fontWeight('regular')">Regular</a>
+            <a href="javascript:void(0)" onclick="fontWeight('medium')">Medium</a>
+            <a href="javascript:void(0)" onclick="fontWeight('semibold')">Semibold</a>
+            <a href="javascript:void(0)" onclick="fontWeight('bold')">Bold</a>
+            <a href="javascript:void(0)" onclick="fontWeight('extrabold')">Extrabold</a>
+          </div>
+        </div>
+        <a href="javascript:void(0)" onclick="toggleItalic()" style="text-decoration: none; color: #483D37; font-weight: 100;">
+          italic
+        </a>
+        <div class="slider-container">
+          <input 
+            type="range" 
+            min="20" 
+            max="400" 
+            value="100" 
+            class="slider" 
+            id="mySlider" 
+            oninput="fontSize(this.value);"
+          >
+          <div class="value">size: <span id="sliderValue">100</span> px</div>
+        </div>
+      </div>
+      <div class="centeralign">
+        <input type="text" id="tryme" value="Try Me!✎">
+      </div>
+    </section>
+
+    <section class="padding verticalspace">
+      <h2>Characters</h2>
+      <div style="padding-bottom: 8vh;"></div>
+      <div class="grid-container"></div>
+    </section>
+    
+    <div class="image-container padding"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
